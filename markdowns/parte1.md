@@ -6,7 +6,7 @@ La herencia en C++ se expresa en la implmentación de una clase mediante el uso 
 
 ```C++ runnable
 #include<iostream>
-using namspace std;
+using namespace std;
 
 class ClaseBase
 {
