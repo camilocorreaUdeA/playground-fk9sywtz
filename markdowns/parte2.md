@@ -13,9 +13,7 @@ class ClaseBase
 	{
 	    for(int i=0; i<str.size(); ++i)
 	        cout<<str[i]<<"__";
-	       
-	    cout<<times<<endl;
-	}
+    }
 };
 
 class ClaseDerivada: public ClaseBase
