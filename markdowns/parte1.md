@@ -57,6 +57,40 @@ class ClaseDerivada : private ClaseBase
 ```
 </ul>
 
+# Inicialización de variables heredadas con el constructor de la clase base
+
+La función principal de los constructores de una clase es la de inicializar las varibles de la clase, sin embargo el constructor de una clase derivada no puede inicializar de manera directa las variables que se han heredado de la clase base. Para que el constructor de la clase derivada pueda inicializar las variables heredadas debe invocar al constructor de la clase base. Esto se logra con el operador dos puntos `:` y ejecutando el constructor de la clase base. Observe el ejemplo a continuación:
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class ClaseBase
+{
+    protected:
+    int unaVar = 0;
+    public:
+    ClaseBase(int x):unaVar(x){}
+    void unMetodo(void)
+    {
+        cout<<"unaVar = "<<unaVar<<endl;
+    }
+};
+
+class ClaseDerivada : public ClaseBase  
+{
+    public:
+    ClaseDerivada(int x):ClaseBase(x){} /* Ejecución del constructor de la clase base */
+};
+
+int main()
+{
+    ClaseDerivada obj1(50); /* Aquí el constructor de la clase derivada invoca el constructor de la clase base */
+    obj1.unMetodo(); 
+    return 0;
+}
+```
+
 ?[¿Se puede acceder a un miembro static a través de un objeto de la clase?]
 -[ ] No, los miembros static no están ligados a instancias de la clase
 -[x] Sí, pueder usarse el operador punto '.'
@@ -82,4 +116,6 @@ class DerivadaB: public DerivadaA
 {
 };
 ```
+
+
 
