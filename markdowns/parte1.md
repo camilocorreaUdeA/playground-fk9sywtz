@@ -33,3 +33,8 @@ int main()
     return 0;
 }
 ```
+# Tipos de herencia en C++
+
+<ul>
+<li><br>Herencia pública</br></li>
+</ul>
