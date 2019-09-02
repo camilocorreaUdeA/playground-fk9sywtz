@@ -28,7 +28,7 @@ class ClaseDerivada : public ClaseBase  /* Sintaxis para indicar que ClaseDeriva
 int main()
 {
     ClaseDerivada obj1;
-    obj1.unMetodo();
+    obj1.unMetodo(); /* Acceso a los miembros heredados de ClaseBase */
     obj1.unMetodo();
     return 0;
 }
