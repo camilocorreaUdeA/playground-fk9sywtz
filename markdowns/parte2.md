@@ -87,6 +87,7 @@ int main()
 	}
 	return 0;
 }
+```
 
 # Tipos de herencia en C++ de acuerdo con la estructura de jerarquía
 
