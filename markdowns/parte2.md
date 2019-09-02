@@ -89,6 +89,7 @@ int main()
 }
 
 # Tipos de herencia en C++ de acuerdo con la estructura de jerarquía
+
 <ul>
 <li><b>Herencia simple:</b>Este tipo de herencia se da cuando una clase derivada hereda solo de una clase base y de igual modo la clase base no hereda a ninguna otra clase.</li>
 <li><b>Herencia múltiple:</b>Ocurre cuando una clase derivada hereda de más de una base clase al tiempo.</li>
