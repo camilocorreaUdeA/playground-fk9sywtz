@@ -51,6 +51,7 @@ using namespace std;
 class ClaseBase
 {
     public:
+    static int inst;
 	ClaseBase()
 	{
 	    cout<<"Hola, soy la clase Base"<<endl;
@@ -62,17 +63,19 @@ class ClaseBase
     }
 };
 
+int ClaseBase::inst = 0;
+
 class ClaseDerivada: public ClaseBase
 {
     public:
 	ClaseDerivada()
 	{
-	    cout<<"Hola, soy la clase Derivada"<<endl;
+	    cout<<"Hola, soy la clase Derivada obj"<<(++inst)<<endl;
     }
     
     ~ClaseDerivada()
 	{
-	    cout<<"Adios, era la clase Derivada"<<endl;
+	    cout<<"Adios, era la clase Derivada obj"<<(++inst)<<endl;
     }
 };
 
