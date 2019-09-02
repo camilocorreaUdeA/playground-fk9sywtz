@@ -75,7 +75,7 @@ class ClaseDerivada: public ClaseBase
     
     ~ClaseDerivada()
 	{
-	    cout<<"Adios, era la clase Derivada obj"<<(inst++)<<endl;
+	    cout<<"Adios, era la clase Derivada obj"<<(inst--)<<endl;
     }
 };
 
