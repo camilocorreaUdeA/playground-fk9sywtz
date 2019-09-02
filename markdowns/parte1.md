@@ -80,7 +80,7 @@ class ClaseBase
 class ClaseDerivada : public ClaseBase  
 {
     public:
-    ClaseDerivada(int x):ClaseBase(x){} /* Ejecución del constructor de la clase base */
+    ClaseDerivada(int x):ClaseBase(x){} /* Ejecución del constructor de la clase base para inicializar a unaVar */
 };
 
 int main()
@@ -91,10 +91,10 @@ int main()
 }
 ```
 
-?[¿Se puede acceder a un miembro static a través de un objeto de la clase?]
--[ ] No, los miembros static no están ligados a instancias de la clase
--[x] Sí, pueder usarse el operador punto '.'
--[ ] No, es un comportamiento indefinido en C++
+?[¿Compilaría exitosamente el siguiente programa?]
+-[ ] Sí, se imprime: "My name is: Objeto_1" y "My name is: Objeto_2"
+-[ ] Sí, pero solo imprime: "My name is: Objeto_1"
+-[x] No, hay varios errores en la definición de las herencias. ¿Cuáles? 
 
 ```C++
 class ClaseBase
@@ -109,12 +109,21 @@ class ClaseBase
 class DerivadaA: private ClaseBase
 {
     public:
-    DerivadaA(std::string n):ClaseBase(n){}
+    DerivadaA(std::string n):name(n){}
 };
 
 class DerivadaB: public DerivadaA
 {
 };
+
+int main()
+{
+    DerivadaA obj1("Objeto_1");
+    DerivadaB obj2("Objeto_2");
+    
+    obj1.showName();
+    obj2.showName();
+}
 ```
 
 
