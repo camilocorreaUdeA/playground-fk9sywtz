@@ -2,6 +2,8 @@ title: Herencia en C++ (Práctica 3)
 plan:
 - title: Concepto de Herencia
   statement: markdowns/parte1.md
+- title: Redefinición de Métodos
+  statement: markdowns/parte2.md
 projects:
   cpp:
     root: /cpp-project
