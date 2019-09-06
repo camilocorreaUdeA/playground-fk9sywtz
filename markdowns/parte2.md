@@ -93,7 +93,8 @@ int main()
 
 <ul>
 <li><b>Herencia simple:</b>Este tipo de herencia se da cuando una clase derivada hereda solo de una clase base y de igual modo la clase base no hereda a ninguna otra clase.</li>
-```C++
+
+```cpp
 class BaseA
 {
 };
@@ -103,7 +104,8 @@ class DerivadaBdeA: public BaseA
 };
 ```
 <li><b>Herencia múltiple:</b>Ocurre cuando una clase derivada hereda de más de una base clase al tiempo.</li>
-```C++
+
+```cpp
 class BaseA
 {
 };
@@ -117,7 +119,8 @@ class DerivadaCdeAyB: public BaseA, public BaseB
 };
 ```
 <li><b>Herencia multinivel:</b>Este tipo de herencia se da cuando una clase derivada 'X' hereda de una clase base a través de otra clase intermediaria que actúa como clase derivada para la clase base original y como clase base para la clase derivada 'X'.</li>
-```C++
+
+```cpp
 class BaseA
 {
 };
@@ -131,7 +134,8 @@ class DerivadaCdeB: public BaseB
 };
 ```
 <li><b>Herencia jerárquica:</b>Ocurre cuando varias clases derivadas heredan de una clase base en común.</li>
-```C++
+
+```cpp
 class BaseA
 {
 };
