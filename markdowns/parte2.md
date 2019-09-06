@@ -164,3 +164,26 @@ class DerivadaCdeAyB: public BaseA, public BaseB
 };
 ```
 </ul>
+
+A ver que aprendimos: Diseñe una clase Boeing777 de modo que cuente con las siguientes propiedades y métodos
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class Turbinas
+{
+    protected:
+    int num_turbinas;
+};
+
+class Avion
+{
+    protected:
+    int alas;
+    int cubierta;
+    int cabina_tripulacion;
+    int cola;
+};
+
+```
