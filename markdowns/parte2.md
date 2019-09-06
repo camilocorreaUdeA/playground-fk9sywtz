@@ -149,7 +149,8 @@ class DerivadaCdeA: public BaseA
 };
 ```
 <li><b>Herencia híbrida:</b>Este tipo de herencia ocurre cuando se combinan dos o más tipos de las herencias mencionadas anteriormente.</li>
-```C++
+
+```cpp
 class BaseA
 {
 };
