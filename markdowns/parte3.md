@@ -118,11 +118,13 @@ El tren de aterrizaje es retractil, tiene 6 neumáticos y 6 amortiguadores.
 <li>
 La cubierta cuenta con cabina de vuelo, cabina de tripulación, sistema de emergencia, 10 tanques de combustible, 150 asientos, una cocineta, 2 baños y 6 salidas.
 </li>
+</ul>
 </li>
 <li>Dron:
 <li>
 2 hélices frontales.
 </li>
+</ul>
 </li>
 </ul>
 
