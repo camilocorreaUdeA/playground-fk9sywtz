@@ -6,6 +6,8 @@ plan:
   statement: markdowns/parte2.md
 - title: Composición de Clases
   statement: markdowns/parte3.md
+- title: Clases Abstractas e Interfaces
+  statement: markdowns/parte4.md
 projects:
   cpp:
     root: /cpp-project
