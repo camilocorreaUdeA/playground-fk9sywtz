@@ -59,7 +59,7 @@ class UnaClase
     public:
     int unaVar;
     UnaClase(int x):unaVar(x){cout<<"UnaClase construido"<<endl;}
-    ~UnaClase{cout<<"UnaClase destruido"<<endl;}
+    ~UnaClase(){cout<<"UnaClase destruido"<<endl;}
 };
 
 class OtraClase
