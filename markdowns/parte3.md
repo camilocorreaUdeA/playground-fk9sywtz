@@ -48,10 +48,9 @@ int main()
 
 El paso de parámetros por referencia con el calificador `const`, tal cual como se pasa un objeto a un constructor de copia, permite hacer el paso de objetos temporales. Un objeto temporal es un objeto que no se declara ya que solo se invoca a través de una expresión o como parámetro de entrada de una función y cuyo tiempo de vida es muy corto.En particular la duración de un objeto temporal es el mismo de la ejecución de la expresión que lo invoca. Lo anterior quiere decir que un objeto temporal solo existe mientras la operación o función que lo invoca toma su valor y luego es destruido en memoria.
 
-Los objetos temporales solo se pueden pasar como parámetros de entrada a funciones que tienen un paso por referencia a objetos de este tipo y calificado con `const`. Observe el siguiente ejemplo en el que se pasa un objeto temporal al constructor de otro objeto en su declaración, ponga especial atención en la ejecución del constructor y el destructor del objeto temporal:
+Los objetos temporales solo se pueden pasar como parámetros de entrada a funciones que tienen un paso por referencia a objetos de este tipo y calificado con `const`. Observe el siguiente ejemplo en el que se pasa un objeto temporal al constructor de otro objeto de una clase compuesta, ponga especial atención en la ejecución del constructor y el destructor del objeto temporal:
 
 ```C++ runnable
-
 #include<iostream>
 using namespace std;
 
@@ -59,8 +58,8 @@ class UnaClase
 {
     public:
     int unaVar;
-    UnaClase(int x):unaVar(x){}
-        
+    UnaClase(int x):unaVar(x){cout<<"UnaClase construido"<<endl;}
+    ~UnaClase{cout<<"UnaClase destruido"<<endl;}
 };
 
 class OtraClase
