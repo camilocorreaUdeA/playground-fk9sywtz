@@ -1,6 +1,49 @@
 # Composición de Clases
 
-Otra forma conocida de reutilizar código que se ha implementado previamente en otras clases es a tráves de lo que se conoce como Composición de Clases. Es similar a la herencia con la principal excepción (entre algunas otras) de que no se utiliza una sintaxis explícita para indicar que se está implementando una composición, simplemente se declaran objetos de distintas clases (comunmente conocidos como partes) al interior de la definición de una nueva clase (conocida como el todo). De esta forma y de manera indirecta la nueva clase adhiere las propiedades y métodos de las clases que la componen. Se puede observar que la composición no solo contribuye a la reusabilidad de código existente sino que también hace que el código sea escalable ya que al no existir una relación estrecha de dependencia entre las clases se pueden implementar cambios en clases individuales para que se vean reflejados en las clases compuestas por objetos de esas clases. El siguiente ejemplo ilustra con mayor claridad el concepto que se acaba de exponer:
+Otra forma conocida de reutilizar código que se ha implementado previamente en otras clases es a tráves de lo que se conoce como Composición de Clases. Es similar a la herencia con la principal excepción (entre algunas otras) de que no se utiliza una sintaxis explícita para indicar que se está implementando una composición, simplemente se declaran objetos de distintas clases (comunmente conocidos como partes) al interior de la definición de una nueva clase (conocida como el todo). De esta forma y de manera indirecta la nueva clase adhiere las propiedades y métodos de las clases que la componen. Se puede observar que la composición no solo contribuye a la reusabilidad de código existente sino que también hace que el código sea escalable ya que al no existir una relación estrecha de dependencia entre las clases se pueden implementar cambios en clases individuales para que se vean reflejados en las clases compuestas por objetos de esas clases. El siguiente ejemplo clarifica el concepto que se acaba de exponer:
+
+```cpp
+class UnaClase
+{
+    private:
+    int unaVar;
+    public:
+    void setVar(int x){unaVar = x;}
+    int getVar(){return unaVar;}
+};
+
+class OtraClase
+{
+    private:
+    UnaClase unObj;
+    public:
+    void setVar(int x){unObj.setVar(x);}
+    int getVar(){return unObj.getVar();}
+    
+};
+
+class OtraClaseMas
+{
+    private:
+    UnaClase otroObj;
+    public:
+    void setVar(int x){otroObj.setVar(x);}
+    int getVar(){return otroObj.getVar();}
+    
+};
+
+int main()
+{
+    OtraClase obj;
+    OtraClaseMas ojt;
+    obj.setVar(5);
+    ojt.setVar(25);
+    cout<<obj.getVar()<<endl;
+    cout<<ojt.getVar()<<endl;
+    
+    return 0;
+}
+```
 
 ```C++ runnable
 #include<iostream>
