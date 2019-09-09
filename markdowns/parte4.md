@@ -72,7 +72,40 @@ class CheckBox: public ElementoGraficoGenerico
     /* Implementación específica de los métodos virtuales puros heredados */
 };
 ```
+Comprueba lo aprendido...
 
+?[¿Qué pasa cuando una clase implementa un mismo método virtual puro heredado de dos interfaces al mismo tiempo como se muestra en el siguiente fragmento de código?]
+-[ ] El compilador arroja un error
+-[ ] La clase Concreta es abstracta también porque solo implementa uno de los métodos puros virtuales
+-[x] El código compila satisfactoriamente y se imprime en pantalla "Método Virtual Puro Redefinido"
+-[ ] Hay una ambigüedad en el método por estar declarado en dos clases al mismo tiempo.
+
+```cpp
+class Interfaz1
+{
+	public:
+    virtual void metodoVirtualPuro() const = 0;
+};
+
+class Interfaz2
+{
+	public:
+    virtual void metodoVirtualPuro() const = 0;
+};
+
+class Concreta: public Interfaz1, public Interfaz2
+{
+	public:
+    void metodoVirtualPuro() const{cout<<"Metodo Virtual Puro Redefinido"<<endl;}
+};
+
+int main()
+{
+	Concreta miObj;
+	miObj.metodoVirtualPuro();
+	return 0;
+}
+```
 
 
 
