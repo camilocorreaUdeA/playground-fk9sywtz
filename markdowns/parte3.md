@@ -12,16 +12,18 @@ class UnaClase
     int getVar(){return unaVar;}
 };
 
+/* La clase OtraClase adquiere por composición los miembros de la clase UnaClase */
 class OtraClase
 {
     private:
-    UnaClase unObj;
+    UnaClase unObj; 
     public:
     void setVar(int x){unObj.setVar(x);}
     int getVar(){return unObj.getVar();}
     
 };
 
+/* Mismo caso aquí */
 class OtraClaseMas
 {
     private:
@@ -36,7 +38,7 @@ int main()
 {
     OtraClase obj;
     OtraClaseMas ojt;
-    obj.setVar(5);
+    obj.setVar(5); /* Acceso al miembro unaVar de las clases OtraClase y OtraClaseMas */
     ojt.setVar(25);
     cout<<obj.getVar()<<endl;
     cout<<ojt.getVar()<<endl;
@@ -48,7 +50,7 @@ int main()
 
 El paso de parámetros por referencia con el calificador `const`, tal cual como se pasa un objeto a un constructor de copia, permite hacer el paso de objetos temporales. Un objeto temporal es un objeto que no se declara ya que solo se invoca a través de una expresión o como parámetro de entrada de una función y cuyo tiempo de vida es muy corto.En particular la duración de un objeto temporal es el mismo de la ejecución de la expresión que lo invoca. Lo anterior quiere decir que un objeto temporal solo existe mientras la operación o función que lo invoca toma su valor y luego es destruido en memoria.
 
-Los objetos temporales solo se pueden pasar como parámetros de entrada a funciones que tienen un paso por referencia a objetos de este tipo y calificado con `const`. Observe el siguiente ejemplo en el que se pasa un objeto temporal al constructor de otro objeto de una clase compuesta, ponga especial atención en la ejecución del constructor y el destructor del objeto temporal:
+Los objetos temporales solo se pueden pasar como parámetros de entrada a funciones que tienen un paso por referencia a objetos de cierta clase calificado con `const`. Observe el siguiente ejemplo en el que se pasa un objeto temporal al constructor de otro objeto de una clase compuesta, ponga especial atención en la ejecución del constructor y el destructor del objeto temporal de la clase UnaClase (sí, son las dos líneas que se imprimen antes del "5". La primera y última línea corresponden al miembro unObj de la clase OtraClase): (TIP: Para incializar los miembros adquiridos a través de un objeto temporal es altamente recomendable invocar los constructores de las clases "compositoras" en el constructor de la clase "compuesta")
 
 ```C++ runnable
 #include<iostream>
@@ -67,13 +69,14 @@ class OtraClase
     private:
     UnaClase unObj;
     public:
-    OtraClase(const UnaClase& oVar):unObj(oVar.unaVar){}
+    /* Inicialización del miembro unObj, utilizando el constructor de la clase UnaClase */
+    OtraClase(const UnaClase& oVar):unObj(oVar.unaVar){} 
     int getVar(){return unObj.unaVar;}
 };
 
 int main()
 {
-    OtraClase obj(UnaClase(5));
+    OtraClase obj(UnaClase(5)); /* Paso por referencia de un objeto temporal de la clase UnaClase */
     cout<<obj.getVar()<<endl;
     
     return 0;
