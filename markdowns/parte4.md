@@ -26,7 +26,7 @@ class Triangulo: public Poligono
     {
         /* Implementacion específica de la clase Triangulo */
     }
-}
+};
 
 class Hexagono: public Poligono
 {
@@ -40,7 +40,42 @@ class Hexagono: public Poligono
     {
         /* Implementacion específica de la clase Hexagono */
     }
-}
+};
 ```
+
+Una interfaz es una clase abstracta pura ya que no tiene variables de clase ni métodos concretos, todos sus métodos son virtuales puros. Este tipo de clases son implementadas comunmente por los arquitectos y diseñadores de software, representan un contrato entre el diseñador y el usuario o desarrollador final de cierta funcionalidad, es decir, en una interfaz el diseñador especifica el nombre del y posiblemente el tipo de retorno y los tipos de los parámetros de entrada del método pero deja a consideración del desarrollador la implementación interna de la funcionalidad. El uso de interfaces es particularmente útil cuando se implementan algunos patrones de diseño de software que involucran clases polimórficas (tema que se trata en la próxima práctica), lo cual es muy común en "frameworks" de desarrollo de software, por ejemplo de interfaces gráficas de usuario (GUIs) donde la mayoría de objetos gráficos que se pueden integrar a la interfaz gráfica implementan interfaces en común que declaran funcionalidades generales de todos los elementos gráficos pero que se implementan con distintas variaciones en cada uno de los elementos gráficos. Ejemplo:
+
+```cpp
+
+/* Interfaz o clase abstracta pura */
+class ElementoGraficoGenerico
+{
+    public:
+    virtual void setColor(const double r, const double g, const double b) = 0;
+    virtual void setPos(double xpos, double ypos) = 0;
+    virtual void setLabel(const string lb) = 0;
+    virtual void onClickPressed() = 0;
+};
+
+class LineaTexto: public ElementoGraficoGenerico
+{
+    /* Implementación específica de los métodos virtuales puros heredados */
+};
+
+class BotonOKCancel: public ElementoGraficoGenerico
+{
+    /* Implementación específica de los métodos virtuales puros heredados */
+};
+
+class CheckBox: public ElementoGraficoGenerico
+{
+    /* Implementación específica de los métodos virtuales puros heredados */
+};
+```
+
+
+
+
+
 
 
