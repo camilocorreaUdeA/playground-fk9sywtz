@@ -126,6 +126,8 @@ La cubierta cuenta con cabina de vuelo, cabina de tripulación, sistema de emerg
 </li>
 </ol>
 
+Estas clases también deben tener un método `prinInfo` para mostrar en consola todos los componentes de esa aeronave en particular.
+
 ```C++ runnable
 #include<iostream>
 using namespace std;
@@ -202,9 +204,9 @@ class Dron
 
 int main()
 {
-    Aeroplano airplane();
-    Jet boeing777();
-    Dron vigilanteNoTripulado();
+    Aeroplano airplane(/* Utilice objetos temporales para inicilizacion */);
+    Jet boeing777(/* Utilice objetos temporales para inicilizacion */);
+    Dron vigilanteNoTripulado(/* Utilice objetos temporales para inicilizacion */);
     
     airplane.printInfo();
     boeing777.printInfo();
