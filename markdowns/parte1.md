@@ -35,7 +35,7 @@ int main()
 ```
 # Tipos de herencia en C++
 
-Antes de hablar de los tipos de herencia en C++ es necesario introducir el concepto de nivel de acceso protegido, ya antes se había revisado los niveles de acceso público y privado. El nivel de acceso protegido, que en C++ se especifica con la palabra `protected` se comporta de manera similar al nivel de acceso privado con la diferencia de que permite que los miembros de clase con este nivel de acceso puedan ser heredados a clases derivadas. Es importante aclarar que los miembros de una clase con acceso privado <b>NO</b> son heredables, como tampoco lo son los constructores, destructores y operadores sobrecargados. A continuación se listan los 3 tipos de herencia en C++:
+Antes de hablar de los tipos de herencia en C++ es necesario introducir el concepto de nivel de acceso protegido, ya antes se había revisado los niveles de acceso público y privado. El nivel de acceso protegido, que en C++ se especifica con la palabra `protected` se comporta de manera similar al nivel de acceso privado con la diferencia de que permite que los miembros de clase con este nivel de acceso puedan ser heredados a clases derivadas. Es importante aclarar que los miembros de una clase con acceso privado <b>NO</b> son heredables, como tampoco lo son los constructores, destructores, clases y funciones amigas, y operadores sobrecargados. A continuación se listan los 3 tipos de herencia en C++:
 
 <ul>
 <li><b>Herencia pública:</b> Se refiere a la herencia en la que todos los miembros públicos y protegidos de la clase base conservan esos mismos niveles de acceso respectivamente en las clases derivadas.</li>
