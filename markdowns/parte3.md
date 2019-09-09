@@ -84,12 +84,9 @@ int main()
 ```
 
 Ahora es tiempo de probar los conocimientos adquiridos. Implemente las clases Aeroplano, Jet y Dron utilizando solamente composición de clases y paso por referencia de objetos temporales. Las clases Turbinas, Helices, Tren de Aterrizaje, Alas, Cubierta son las clases "compositoras" para las clases "compuestas" mencionadas anterirormente, es decir, en las clases Aeroplano, Jet y Dron debe declararse un miembro de cada una de esas clases compositoras. Las clases compuestas deben cumplir con los siguientes requerimientos:
-<ul>
+<ol>
 <li>Aeroplano:
 <ul>
-<li>
-No tiene turbinas.
-</li>
 <li>
 2 hélices frontales.
 </li>
@@ -121,12 +118,13 @@ La cubierta cuenta con cabina de vuelo, cabina de tripulación, sistema de emerg
 </ul>
 </li>
 <li>Dron:
+<ul>
 <li>
-2 hélices frontales.
+4 hélices en la parte superior.
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 
 ```C++ runnable
 #include<iostream>
