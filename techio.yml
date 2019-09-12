@@ -10,6 +10,8 @@ plan:
   statement: markdowns/parte4.md
 - title: Herencia virtual
   statement: markdowns/parte5.md
+- title: Ejercicios
+  statement: markdowns/parte6.md
 projects:
   cpp:
     root: /cpp-project
