@@ -62,3 +62,16 @@ int main()
     return 0;
 };
 ```
+Considere que se implementó la herencia virtual para evitar el problema de ambigüedad, luego responda a las siguientes inquietudes:
+
+?[¿Qué pasa cuándo una de las dos clases B y C (pero no las dos al tiempo) redefine el método unMetodoX?]
+-[ ] De nuevo hay ambigüedad
+-[ ] Se sigue ejecutando la definición del método en la clase A
+-[x] Se ejecuta la redefinición del método en la clase intermedia.
+-[ ] Es una situación con un comportamiento indefinido
+
+?[¿Qué pasa cuándo ambas clases B y C redefinen el método unMetodoX?]
+-[x] De nuevo hay ambigüedad
+-[ ] Se sigue ejecutando la definición del método en la clase A
+-[ ] Se ejecuta la redefinición del método en la clase intermedia que está de primera en orden en la herencia de la clase D.
+-[ ] Es una situación con un comportamiento indefinido
