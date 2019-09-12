@@ -14,14 +14,10 @@ class A
 
 class B: public A  
 {
-    public:
-    void unMetodoX(){cout<<"Soy de la clase B"<<endl;}
 };
 
 class C: public A
 {
-    public:
-    void unMetodoX(){cout<<"Soy de la clase C"<<endl;}
 };
 
 class D: public B, public C
@@ -49,14 +45,10 @@ class A
 
 class B: virtual public A  
 {
-    public:
-    void unMetodoX(){cout<<"Soy de la clase B"<<endl;}
 };
 
 class C: virtual public A
 {
-    public:
-    void unMetodoX(){cout<<"Soy de la clase C"<<endl;}
 };
 
 class D: public B, public C
