@@ -66,7 +66,7 @@ int main()
 ```
 Considere que se implementó la herencia virtual para evitar el problema de ambigüedad, luego responda a las siguientes inquietudes:
 
-?[¿Qué pasa cuándo una de las dos clases B y C (pero no las dos al tiempo) redefine el método unMetodoX?]
+?[¿Qué pasa cuándo una de las dos clases derivadas intermedias, B o C, (pero no las dos al tiempo) redefine el método unMetodoX?]
 -[ ] De nuevo hay ambigüedad
 -[ ] Se sigue ejecutando la definición del método en la clase A
 -[x] Se ejecuta la redefinición del método en la clase intermedia.
