@@ -1,6 +1,8 @@
 # Herencia virtual
 
-Visualice una situación en la que hay herencia híbrida dada por la combinanción de herencia jerárquica, herencia múltiple y herencia multinivel. En dicha situación dos clases B y C heredan de una clase A, y asu vez una clase D hereda de las clases B y C al tiempo. La situación puede observarse en el siguiente ejemplo, ejecutelo y observe el resultado del proceso de compilación.
+Visualice una situación en la que hay herencia híbrida dada por la combinanción de herencia jerárquica, herencia múltiple y herencia multinivel. En dicha situación dos clases B y C heredan de una clase A, y asu vez una clase D hereda de las clases B y C al tiempo. La situación puede observarse en el siguiente gráfico y en el siguiente coódigo de ejemplo.Por favor ejecutelo y observe el resultado al final de la ejecución.
+
+<img src="class_diamond.png">
 
 ```C++ runnable
 #include<iostream>
