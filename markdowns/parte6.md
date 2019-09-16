@@ -6,7 +6,6 @@ Una utilidad interesante e importante de la herencia que se manifiesta a través
 
 <ul>
 <li>Una interfaz SerVivo que tiene los siguientes métodos virtuales puros: Respiro, MeAlimento, Habito, MeReproduzco, MeDesplazo. Estos métodos no tienen parámetros de entrada ni retornan valor alguno.
-</ul>
 <li>
 Las clases Ave, Mamifero, Reptil, Anfibio, Pez e Insecto que heredan de la interfaz SerVivo. Estas clases deben contener variables privadas heradables para los atributos característicos de cada especie, por ejemplo: número de patas, si tiene alas, tipo de piel (pelaje, plumas, escamas, etc.), si es acuático, terrestre o aéreo, si pone huevos o no, si tiene branquias o nariz, si camina, nada o vuela, lugar que habita (selvas, lagos, árboles, etc.), tipo de alimentación (si es carnívoro, herbívoro, etc.), de que se alimenta (frutos, hierba, otros animales), si es venenoso o no, etc. Estas clases deben contar con constructores públicos (parametrizado o de copia) para inicializar todas las variables. 
 </li>
@@ -19,5 +18,6 @@ Implemente una función ImprimirConsolidadoSerVivo que no tiene valor de retorno
 <li>
 En una pequela aplicación instancie objetos para cada una de las clases de ser vivo que haya diseñado y luego invoque la función ImprimirConsolidadoSerVivo para cada uno de estos objetos.
 </li>
+</ul>
 </li>
 </ol>
