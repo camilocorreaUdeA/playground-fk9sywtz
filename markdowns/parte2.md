@@ -155,11 +155,15 @@ class BaseA
 {
 };
 
+class BaseB
+{
+};
+
 class DerivadaBdeA: public BaseA
 {
 };
 
-class DerivadaCdeAyB: public BaseA, public BaseB
+class DerivadaCdeAyB: public DerivadaBdeA, public BaseB
 {
 };
 ```
