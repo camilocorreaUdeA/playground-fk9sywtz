@@ -129,7 +129,7 @@ class DerivadaBdeA: public BaseA
 {
 };
 
-class DerivadaCdeB: public BaseB
+class DerivadaCdeB: public DerivadaBdeA
 {
 };
 ```
